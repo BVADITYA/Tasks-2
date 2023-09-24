@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Task6</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    .center {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        padding-top: 40px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 40px;
+        border-bottom-color: black;
+    }
+
+    p.h1 {
+        font-family: cursive;
+        padding-bottom: 20px;
+    }
+
+    .i1 {
+        width: 100%;
+        background-color: rgb(57, 49, 204);
+        color: white;
+        text-align: center;
+        padding: 10px;
+        width: 100%;
+    }
+</style>
+
+<body>
+    <div class="center">
+        <form>
+        <table  cellpadding="15px"  style="border-bottom-color: black ;background-color: rgb(234,231,231);">
+            <th align="center" colspan="2">
+                <p class="h1" align="center">Instagram</p>
+
+            </th>
+            <tr>
+                <td><i class="fa-solid fa-user" ;></i></td>
+                <td><input class="input-field" type="text" placeholder="Username" required></td>
+            </tr>
+            <tr>
+                <td><i class="fa-solid fa-lock"></i></td>
+                <td><input class="input-field" type="password" placeholder="Password" required></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input class="i1" type="submit" value="Login" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" />Remember me
+                </td>
+                <td style="text-align: right;">
+                    <a class="i2" href="#">Forgot Password?</a>
+                </td>
+            </tr>
+        </table>
+        </form>
+        <br>
+        <p align="center">Don't have an account! <a href="#">Sign up here.</a></p>
+
+    </div>
+</body>

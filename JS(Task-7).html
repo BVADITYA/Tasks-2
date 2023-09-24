@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Task7</title>
+    <style> 
+        #train-image {
+            position: relative;
+            animation: animation1 30s infinite;
+        }
+        
+        #train-image:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes animation1 {
+            from { left: 0%; } 
+            to { left: 100%; }
+        }
+
+        /* Center-align buttons in the same line */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button-container button {
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<style>
+    button{
+        text-align: center;
+    }
+</style>
+<body>
+    <img id="train-image" src="./train.png" alt="Train Image" />
+    <br>
+    <br>
+    <h1 style="color: blue;text-align: center;">
+        Click the following buttons to handle animation
+    </h1>
+    <div class="button-container">
+        <button onclick="startAnimation()">Start</button>
+        <button onclick="stopAnimation()">Stop</button>
+    </div>
+    <script>
+        let animationPaused = false;
+
+        function startAnimation() {
+            if (animationPaused) {
+                const trainImage = document.getElementById("train-image");
+                trainImage.style.animationPlayState = "running";
+                animationPaused = false;
+            }
+        }
+
+        function stopAnimation() {
+            if (!animationPaused) {
+                const trainImage = document.getElementById("train-image");
+                trainImage.style.animationPlayState = "paused";
+                animationPaused = true;
+            }
+        }
+    </script>
+</body>
+</html>

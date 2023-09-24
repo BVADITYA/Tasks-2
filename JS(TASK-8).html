@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Task8</title>
+</head>
+<style>
+    .center {
+        background-image: linear-gradient(rgb(227, 225, 180), rgb(136, 36, 110));
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        padding-top: 40px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 40px;
+    }
+</style>
+
+<body>
+    <div class="center">
+
+        <h1 align="center" style="color: blue;">Registration Form</h1>
+        <form>
+            <table cellspacing="20px">
+                <tr>
+                    <th><label for="FN">First Name </label></th>
+                    <td><input onkeyup="checkStrength()" type="text" name="FN" id="i1"><span id="m1"
+                            style="color: red;">Poor</span><br />
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <th><label for="LN">Last Name</label></th>
+
+                    <td><input onkeyup="checkStrength()" type="text" name="LN" id="i2"><span id="m2"
+                            style="color: red;">Poor</span><br />
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <th><label for="e">Email</label></th>
+                    <td><input onkeyup="checkStrength()" type="email" name="e" id="i3"><span id="m3"
+                            style="color: red;">Poor</span><br />
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <th><label for="p">password</label></th>
+                    <td><input onkeyup="checkStrength()" type="password" name="p" id="i4"><span id="m4"
+                            style="color: red;">Poor</span><br /></td>
+
+                </tr>
+
+                <tr>
+                    <th><label for="rp">Re-password</label></th>
+                    <td><input onkeyup="checkStrength()" type="password" name="rp" id="i5"><span id="m5"
+                            style="color: red;">Poor or
+                            Mismatch</span><br /></td>
+
+                </tr>
+                <tr>
+                    <th><label for="g">Gender</label></th>
+                    <td><input type="radio" name="g">Male<br />
+                        <input type="radio" name="g">Female<br />
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="a">Age</label></th>
+                    <td><input onkeyup="checkStrength()" type="number" name="a" id="i6"><span id="m6"
+                            style="color: red;">Poor</span><br />
+                    </td>
+
+                </tr>
+                <tr>
+                    <th><label for="ph">Phone Number</label></th>
+                    <td><input onkeyup="checkStrength()" type="number" id="i7" name="ph"><span id="m7"
+                            style="color: red;">Poor</span><br />
+                    </td>
+
+                </tr>
+                <tr>
+                    <th><label for="addr">Address</label></th>
+                    <td><textarea onkeyup="checkStrength()" name="addr" id="i8" rows="4" cols="50"></textarea><span
+                            id="m8" style="color: red;">Poor</span><br /></td>
+
+                </tr>
+                <tr>
+                    <th><label for="st">State</label></th>
+                    <td><input type="text" name="st"><br /></td>
+
+                </tr>
+                <tr>
+                    <th><label for="ct">country</label></th>
+                    <td><select name="ct">
+                            <option>Choose a country</option>
+                            <option>India</option>
+                            <option>Usa</option>
+                    </td>
+                    </select>
+                </tr>
+                <tr>
+                    <th>Languages known</th>
+                    <td>
+                        <input type="checkbox" />English
+                        <input type="checkbox" />Kannada
+                        <input type="checkbox" />Hindi
+                        <input type="checkbox" />Telugu
+                    </td>
+                </tr>
+                <tr class="class">
+                    <td colspan="2">
+                        <input type="checkbox" />Hereby I declare all the given details are true
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="end">Login to <a href="https://www.ethnus.com">Ethnus</a> here</td>
+                </tr>
+                <table width="55%">
+                    <tr>
+                        <td><input type="button" value="Register" style="color: white; background-color: red;"></td>
+                        </td>
+                    </tr>
+                </table>
+        </form>
+    </div>
+    <script>
+        function checkStrength() {
+            var FN = document.getElementById("i1").value;
+            var LN = document.getElementById("i2").value;
+            var EM = document.getElementById("i3").value;
+            var PA = document.getElementById("i4").value;
+            var RP = document.getElementById("i5").value;
+            var AG = document.getElementById("i6").value;
+            var PH = document.getElementById("i7").value;
+            var AD = document.getElementById("i8").value;
+
+            if (FN.length == 0) {
+                document.getElementById("m1").innerText = "Poor";
+                document.getElementById("m1").style.color = "red";
+            } 
+            else {
+                document.getElementById("m1").innerText = "Good";
+                document.getElementById("m1").style.color = "green";
+            }
+
+            if (LN.length == 0) {
+                document.getElementById("m2").innerText = "Poor";
+                document.getElementById("m2").style.color = "red";
+            } 
+            else {
+                document.getElementById("m2").innerText = "Good";
+                document.getElementById("m2").style.color = "green";
+            }
+
+            if (EM.length == 0) {
+                document.getElementById("m3").innerText = "Poor";
+                document.getElementById("m3").style.color = "red";
+            } 
+            else {
+                document.getElementById("m3").innerText = "Good";
+                document.getElementById("m3").style.color = "green";
+            }
+            if (PA.length == 0) {
+                document.getElementById("m4").innerText = "Poor";
+                document.getElementById("m4").style.color = "red";
+            } 
+            else {
+                document.getElementById("m4").innerText = "Good";
+                document.getElementById("m4").style.color = "green";
+            }
+
+            if (RP.length == 0) {
+                document.getElementById("m5").innerText = "Poor or mismatch";
+                document.getElementById("m5").style.color = "red";
+            } 
+            else {
+                document.getElementById("m5").innerText = "Good";
+                document.getElementById("m5").style.color = "green";
+            }
+
+            if (AG.length == 0) {
+                document.getElementById("m6").innerText = "Poor";
+                document.getElementById("m6").style.color = "red";
+            } 
+            else {
+                document.getElementById("m6").innerText = "Good";
+                document.getElementById("m6").style.color = "green";
+            }
+
+            if (PH.length == 0) {
+                document.getElementById("m7").innerText = "Poor";
+                document.getElementById("m7").style.color = "red";
+            } 
+            else {
+                document.getElementById("m7").innerText = "Good";
+                document.getElementById("m7").style.color = "green";
+            }
+
+            if (AD.length == 0) {
+                document.getElementById("m8").innerText = "Poor";
+                document.getElementById("m8").style.color = "red";
+            } 
+            else {
+                document.getElementById("m8").innerText = "Good";
+                document.getElementById("m8").style.color = "green";
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

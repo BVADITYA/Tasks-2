@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Task4</title>
+</head>
+<body>
+    <button onclick="showdate()">Show Date</button>
+    <p id="d1"></p><br>
+    <button onclick="showtime()">Show Time</button>
+    <p id="t1"></p>
+    <script>
+        function showdate()
+        {
+            const present_date=new Date();
+            const year=present_date.getFullYear();
+            let month=present_date.getMonth()+1;
+            let date=present_date.getDate();
+            if(month<10)
+            {
+                month = "0" + month
+            }
+            if(date<10)
+            {
+                date = "0" + date
+            }
+            const date_today=date + "/" + month + "/" + year;
+            document.getElementById("d1").innerHTML=date_today
+            
+        }
+        function showtime()
+        {
+            document.getElementById("t1").innerHTML=Date();
+        }
+    </script>
+</body>
+</html>

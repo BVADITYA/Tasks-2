@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BS-Task2</title>
+    <!-- Add Bootstrap CSS links -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css">
+    <!-- Additional CSS for custom styles -->
+    <style>
+        /* Custom styles for homepage buttons */
+        .btn-homepage {
+            background-color: #333;
+            color: white;
+        }
+
+        /* Increase spacing between "Opening Hour," "Call Us," and "Email Us" */
+        .header-info span {
+            margin-right: 20px;
+        }
+
+        /* Styling for navbar background color */
+        .navbar {
+            background-color: gold;
+        }
+
+        /* Styling for "Builderz" div box */
+        .builderz-box {
+            background-color: gold;
+            padding: 10px;
+            border: 2px solid #333;
+        }
+
+        /* Change text color to black */
+        .text-black {
+            color: black;
+        }
+
+        /* Gold background for header */
+        .header {
+            background-color: gold;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        /* Golden background for Quality Worker */
+        .quality-worker-bg {
+            background-color: gold;
+            padding-top: 0; /* Remove top padding */
+        }
+
+        /* Secondary text color for Quality Worker heading and text */
+        .text-secondary {
+            color: #6c757d; /* Bootstrap's secondary text color */
+        }
+
+        /* Background image for the content section */
+        .content-bg {
+            background-image: url('./workers.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <h1 class="text-black">Builderz</h1>
+                </div>
+                <div class="col-6 text-right">
+                    <div class="d-inline-block bg-yellow p-2 header-info">
+                        <span>Opening Hour</span>
+                        <span>Call Us</span>
+                        <span>Email Us</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-gold">
+        <div class="container">
+            <a class="navbar-brand text-black" href="#">Home</a>
+            <a class="navbar-brand text-black" href="#">About</a>
+            <a class="navbar-brand text-black" href="#">Service</a>
+            <a class="navbar-brand text-black" href="#">Team</a>
+            <a class="navbar-brand text-black" href="#">Product</a>
+            <a class="navbar-brand text-black" href="#">Pages</a>
+            <a class="navbar-brand text-black" href="#">Contact</a>
+            <button class="btn btn-primary ml-auto btn-homepage">Get a Quote</button>
+        </div>
+    </nav>
+
+    <!-- Main Content with fixed background image -->
+    <div class="content-bg">
+        <main class="bg-light-blue text-center py-5">
+            <div class="container">
+                <h4 class="text-black">We are professional</h4>
+                <h1 class="text-black">For Your Dream Project</h1>
+                <button class="btn btn-primary btn-lg mt-3 btn-homepage">Get a Quote</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5 class="text-gold">Expert Worker</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="col-md-4 quality-worker-bg">
+                    <h5 class="text-gold text-secondary">Quality Worker</h5>
+                    <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="text-gold">24/7 Support</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add Bootstrap JS scripts for functionality (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

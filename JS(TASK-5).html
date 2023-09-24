@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Task5</title>
+</head>
+<style>
+    .center {
+        background-color: white;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        padding-top: 40px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 40px;
+    }
+</style>
+<body>
+    <div class="center">
+        <form>
+            <table cellspacing="20px">
+                <tr>
+                    <td>
+                        <label for="name">Name:</label>
+                    </td>
+                    <td>
+                        <input name="name" type="text" onkeyup="check()" style="border-color: red;" id="i1" /><span
+                            id="m1" style="color: red;">This field is required</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="em">Email:</label>
+                    </td>
+                    <td>
+                        <input name="em" type="text" onkeyup="check()" style="border-color: red;" id="i2" /><span
+                            id="m2" style="color: red;">A valid email address is required</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="we">Website:</label>
+                    </td>
+                    <td>
+                        <input name="we" type="text" onkeyup="check()" style="border-color: red;" id="i3" /><span
+                            id="m3" style="color: red;">A valid url is required</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="me">Message:</label>
+                    </td>
+                    <td>
+                        <textarea name="me" type="text" onkeyup="check()" style="border-color: red;"
+                            id="i4" /></textarea><span id="m4" style="color: red;">This field is required</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="Submit" style="margin-left: 100px;">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <script>
+            function check() {
+                var n = document.getElementById("i1").value;
+                var e = document.getElementById("i2").value;
+                var w = document.getElementById("i3").value;
+                var m = document.getElementById("i4").value;
+                if (n.length != 0) {
+                    document.getElementById("m1").innerText = "Good";
+                    document.getElementById("m1").style.color = "green";
+                }
+                else {
+                    document.getElementById("m1").innerText = "This field is required";
+                    document.getElementById("m1").style.color = "red";
+                }
+                if (e.length != 0) {
+                    document.getElementById("m2").innerText = "Good";
+                    document.getElementById("m2").style.color = "green";
+                }
+                else {
+                    document.getElementById("m2").innerText = "A valid email address is required";
+                    document.getElementById("m2").style.color = "red";
+                }
+                if (w.length != 0) {
+                    document.getElementById("m3").innerText = "Good";
+                    document.getElementById("m3").style.color = "green";
+                }
+                else {
+                    document.getElementById("m3").innerText = "A valid url is required";
+                    document.getElementById("m3").style.color = "red";
+                }
+                if (m.length != 0) {
+                    document.getElementById("m4").innerText = "Good";
+                    document.getElementById("m4").style.color = "green";
+                }
+                else {
+                    document.getElementById("m4").innerText = "This field is  required";
+                    document.getElementById("m4").style.color = "red";
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>
